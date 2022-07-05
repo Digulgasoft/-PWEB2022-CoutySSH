@@ -55,7 +55,7 @@ echo ""
 echo -e "           \033[1;33m● \033[1;32mFINALIZANDO A ATUALIZAÇÃO, PODE DEMORAR \033[1;33m● \033[1;33mAGUARDE...\033[0m"
 cd /var/www/html || exit
 rm -rf * > /dev/null 2>&1
-wget https://github.com/nandoslayer/plusnssh/raw/ntech/gestorssh/gestorssharm18.zip > /dev/null 2>&1
+wget https://github.com/CoutySSH/PWEB2022/raw/ntech/gestorssh/gestorssharm18.zip > /dev/null 2>&1
 sleep 1
 unzip -o gestorssharm18.zip > /dev/null 2>&1
 rm -rf gestorssharm18.zip index.html > /dev/null 2>&1
