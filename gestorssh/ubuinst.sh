@@ -31,11 +31,11 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 chmod +x /usr/local/bin/composer
 cd /var/www/html || exit
-wget https://raw.githubusercontent.com/CoutySSH/PWEB2022/main/gestorssh/gestorssh18.zip > /dev/null 2>&1
+wget https://raw.githubusercontent.com/CoutySSH/PWEB2022/main/gestorssh/painelG22.zip > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
-unzip gestorssh18.zip > /dev/null 2>&1
+unzip painelG22.zip > /dev/null 2>&1
 chmod -R 777 /var/www/html
-rm gestorssh18.zip index.html > /dev/null 2>&1
+rm painelG22.zip index.html > /dev/null 2>&1
 (echo yes; echo yes; echo yes; echo yes) | composer install > /dev/null 2>&1
 (echo yes; echo yes; echo yes; echo yes) | composer require phpseclib/phpseclib:~2.0 > /dev/null 2>&1
 systemctl restart mysql
