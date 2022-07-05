@@ -42,14 +42,14 @@ phpmyadminfix
 }
 phpmyadminfix(){
 rm /etc/httpd/conf.d/phpMyAdmin.conf > /dev/null 2>&1
-wget https://github.com/nandoslayer/plusnssh/raw/ntech/gestorssh/cent7/phpMyAdmin.conf -O /etc/httpd/conf.d/phpMyAdmin.conf > /dev/null 2>&1
+wget https://raw.githubusercontent.com/CoutySSH/PWEB2022/main/gestorssh/cent7/phpMyAdmin.conf -O /etc/httpd/conf.d/phpMyAdmin.conf > /dev/null 2>&1
 chmod 777 /etc/httpd/conf.d/phpMyAdmin.conf > /dev/null 2>&1
 service httpd restart
 installweb
 }
 installweb(){
 cd /var/www/html || exit
-wget https://github.com/nandoslayer/plusnssh/raw/ntech/gestorssh/gestorssh.zip > /dev/null 2>&1
+wget https://raw.githubusercontent.com/CoutySSH/PWEB2022/main/gestorssh/gestorssh.zip > /dev/null 2>&1
 unzip gestorssh.zip > /dev/null 2>&1
 sed -i "s;1020;$root_password;g" /var/www/html/pages/system/pass.php > /dev/null 2>&1
 chmod 777 -R /var/www/ > /dev/null 2>&1
@@ -58,7 +58,7 @@ cd || exit
 createdb
 }
 createdb(){
-wget https://github.com/nandoslayer/plusnssh/raw/ntech/gestorssh/bdgestorssh.sql > /dev/null 2>&1
+wget https://raw.githubusercontent.com/CoutySSH/PWEB2022/main/gestorssh/bdgestorssh.sql > /dev/null 2>&1
 mysql -h localhost -u root -p$root_password -e "CREATE DATABASE sshplus" > /dev/null 2>&1
 mysql -h localhost -u root -p$root_password --default_character_set utf8 sshplus < bdgestorssh.sql > /dev/null 2>&1
 rm -rf bdgestorssh.sql > /dev/null 2>&1
@@ -78,8 +78,8 @@ echo "
 5 */12 * * * cd /var/www/html/pages/system/ && /usr/bin/php cron.backup.php && cd /root" > cronset
 crontab cronset && rm cronset
 cd /bin || exit
-wget https://github.com/nandoslayer/plusnssh/raw/ntech/gestorssh/userteste.sh
-wget https://github.com/nandoslayer/plusnssh/raw/ntech/gestorssh/autobackup.sh
+wget https://raw.githubusercontent.com/CoutySSH/PWEB2022/main/gestorssh/userteste.sh
+wget https://raw.githubusercontent.com/CoutySSH/PWEB2022/main/gestorssh/autobackup.sh
 chmod 777 /bin/userteste.sh > /dev/null 2>&1
 chmod 777 /bin/autobackup.sh > /dev/null 2>&1
 mkdir /root/backupsql > /dev/null 2>&1
