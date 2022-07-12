@@ -12,7 +12,7 @@ apt install wget -y; bash <(wget -qO- https://raw.githubusercontent.com/CoutySSH
 ```
 apt install wget -y; bash <(wget -qO- https://raw.githubusercontent.com/CoutySSH/PWEB2022/main/gestorssh/instcheck.sh)
 ```
-# INSTALAR OU ATUALIZAR PAINELWEB GESTOR-SSH DEBIAN 8, UBUNTU 14 E UBUNTU 18! ATUALIZAÇÃO 13/05/2022.
+# INSTALAR OU ATUALIZAR PAINELWEB GESTOR-SSH DEBIAN 8, UBUNTU 14 E UBUNTU 18! ATUALIZAÇÃO 13/07/2022. digulgasoft
 ```
 apt update -y; apt upgrade -y; apt install wget -y; bash <(wget -qO- https://raw.githubusercontent.com/Digulgasoft/PWEB2022/main/gestorssh/instpainel.sh)
 ```
